@@ -1,0 +1,11 @@
+parameters:
+    someFormatArray: ['Homme', 'Femme']
+
+
+App\Entity\Human:
+  human{0..10}:
+    birthAt: '<dateTimeBetween("-50 years", "now")>'
+    firstName: "<firstName()>"
+    lastName: "<lastName()>"
+    genre: '<randomElement($someFormatArray)>'
+    hobbies: '<numberBetween(1, 3)>x @hobby*'

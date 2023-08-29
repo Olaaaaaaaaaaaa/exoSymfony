@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HumanController!
+{% endblock %}
+
+{% block body %}
+	<h1>Ajouter un human</h1>
+
+	{{ form_start(form) }}
+    {{ form_row(form.birthAt) }}
+    {{ form_row(form.firstName) }}
+    {{ form_row(form.lastName) }}
+    {{ form_row(form.genre) }}
+    {{ form_row(form.hobbies) }}
+    <button type="submit">Valider le formulaire</button>
+	{{ form_end(form) }}
+
+<a href="{{ path('app_human') }}">HOME</a>
+
+{% endblock %}
+
+

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HumanController!{% endblock %}
+
+{% block body %}
+
+<h1>Liste des humans !</h1>
+
+    <ul>
+		{% for human in humans %}
+			<li>
+				<a href="{{ path('app_human_show', {'id': human.id}) }}">{{ human.firstName }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+
+<a href="{{ path('app_human_add') }}">Ajouter un Human</a>
+
+{% endblock %}

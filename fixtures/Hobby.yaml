@@ -1,0 +1,4 @@
+App\Entity\Hobby:
+  hobby{0..5}:
+    label: "<word()>"
+  

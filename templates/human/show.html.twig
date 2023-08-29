@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HumanController!
+{% endblock %}
+
+{% block body %}
+	<h1>{{ human.firstName }} {{ human.lastName }}</h1>
+
+	<p>Date de naissance:
+		{{ human.birthAt|date('d/m/Y') }}</p>
+
+    <p>Genre:
+	{{ human.genre }}</p>
+
+    <h5>Hobbies :</h5>
+
+	{% for hobby in human.hobbies %}
+		<ul>
+			<li>{{ hobby.label }}</li>
+		</ul>
+	{% endfor %}
+
+    <a href="{{ path('app_human') }}">HOME</a>
+
+{% endblock %}
